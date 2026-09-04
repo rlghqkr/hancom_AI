@@ -66,7 +66,7 @@ html, body { margin: 0; padding: 0; }
   box-shadow: var(--glass-shadow);
 }
 .selffit-app .logo { display: flex; align-items: center; gap: 9px; font-weight: 700; font-size: 17px; }
-.selffit-app .logo-mark { width: 24px; height: 24px; border-radius: 7px; background: linear-gradient(135deg, var(--blue), var(--violet)); }
+.selffit-app .logo-mark { width: 32px; height: 32px; object-fit: contain; display: block; }
 .selffit-app .nav-links { display: flex; gap: 40px; font-size: 15.5px; color: var(--ink-muted); }
 @media (max-width: 760px) { .selffit-app .nav-links { display: none; } }
 .selffit-app .nav-right { display: flex; align-items: center; gap: 14px; }
@@ -376,23 +376,31 @@ html, body { margin: 0; padding: 0; }
 .selffit-app button:disabled { opacity: 0.5; cursor: not-allowed; }
 
 /* ---------- AUTH FORMS (login / signup) ---------- */
-.selffit-app .form-field { margin-bottom: 16px; }
-.selffit-app .form-label { display: block; font-size: 13px; font-weight: 600; color: var(--ink-muted); margin-bottom: 7px; }
+.selffit-app .form-field { margin-bottom: 20px; }
+.selffit-app .form-label { display: block; font-size: 14px; font-weight: 600; color: var(--ink-muted); margin-bottom: 8px; }
 .selffit-app .form-input {
-  width: 100%; font: inherit; font-size: 14.5px; color: var(--ink);
-  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px;
+  width: 100%; font: inherit; font-size: 16px; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 15px 16px;
   -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
   transition: border-color 0.15s ease;
 }
 .selffit-app .form-input::placeholder { color: var(--ink-muted); opacity: 0.7; }
 .selffit-app .form-input:focus { outline: none; border-color: var(--blue); }
-.selffit-app .form-error { font-size: 12.5px; color: #E14C4C; margin: 0 0 14px; }
-.selffit-app .form-note { font-size: 13.5px; color: var(--ink-muted); margin: 10px 0 0; }
-.selffit-app .form-submit { width: 100%; justify-content: center; margin-top: 4px; }
-.selffit-app .form-foot { font-size: 13.5px; color: var(--ink-muted); text-align: center; margin-top: 18px; }
+.selffit-app .form-error { font-size: 13.5px; color: #E14C4C; margin: 0 0 16px; }
+.selffit-app .form-note { font-size: 15px; color: var(--ink-muted); margin: 12px 0 0; }
+.selffit-app .form-submit {
+  width: 100%; justify-content: center; margin-top: 6px;
+  font-size: 16px; padding: 16px 24px; border-radius: 12px;
+}
+.selffit-app .form-foot { font-size: 14.5px; color: var(--ink-muted); text-align: center; margin-top: 20px; }
 .selffit-app .form-link { color: var(--blue); font-weight: 600; }
+
 .selffit-app .auth-shell {
-  max-width: 460px; min-height: 100vh; padding-top: 40px; padding-bottom: 40px;
+  max-width: 560px; min-height: 100vh; padding-top: 40px; padding-bottom: 40px;
   display: flex; flex-direction: column; justify-content: center;
 }
-.selffit-app .auth-shell .question-card { margin-bottom: 0; }
+.selffit-app .auth-shell .page-back { font-size: 15px; margin-bottom: 22px; }
+.selffit-app .auth-shell .page-title { font-size: clamp(28px, 3.6vw, 36px); margin-bottom: 10px; }
+.selffit-app .auth-shell .page-sub { font-size: 16px; margin-bottom: 28px; }
+.selffit-app .auth-shell .question-card { padding: 34px 32px; border-radius: 20px; margin-bottom: 0; }
+.selffit-app .auth-shell .question-text { font-size: 19px; }

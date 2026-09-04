@@ -65,7 +65,7 @@ const LandingPage: React.FC = () => {
 
       <div className="wrap">
         <nav>
-          <div className="logo"><span className="logo-mark" />SelfFit</div>
+          <div className="logo"><img className="logo-mark" src="/logo.png" alt="" />SelfFit</div>
           <div className="nav-links">
             <a href="#why">도입 배경</a>
             <a href="#feature">핵심 기능</a>
