@@ -6,7 +6,10 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import type { Session } from '@supabase/supabase-js';
-import { API_URL, supabase } from '@/lib/supabase';
+import { getSupabase } from '@/lib/supabase';
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000';
+const supabase = getSupabase();
 
 type Check = { label: string; state: 'idle' | 'ok' | 'fail'; detail: string };
 
