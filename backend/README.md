@@ -1,5 +1,7 @@
 # SelfFit Backend (FastAPI)
 
+팀원용 가이드는 [`guideline/`](guideline/README.md), 기획·설계 문서는 [`docs/`](docs/)에 있습니다.
+
 ## 실행
 
 ```bash
